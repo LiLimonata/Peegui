@@ -42,20 +42,20 @@ client.once('ready', () => {
 
         const args = message.content.slice(prefix.length).split(/ +/);
         const command = args.shift().toLowerCase();
-        const randomXp = Math.floor(Math.random() * 9) + 1; 
+        const randomXp = Math.floor(Math.random() * 9) + 1;
         const hasLeveledUp = await Levels.appendXp(message.author.id, message.guild.id, randomXp);
         if (hasLeveledUp) {
             const user = await Levels.fetch(message.author.id, message.guild.id);
             const newEmbed = new Discord.MessageEmbed()
             var author = message.author
-            .setColor('#215B8F')
-            .setURL('https://www.youtube.com/channel/UCiJymGtm9kq-Fhuqoin0DiQ')
-            .setDescription('*Kullanabileceğin Komutlar bunlar.*')
-            .addFields(
-              {name: ` @${author.tag}'ın leveli artık **${user.level}**`, value: 'By LighTra#5975'},
-              
-            )
-            
+                .setColor('#215B8F')
+                .setURL('https://www.youtube.com/channel/UCiJymGtm9kq-Fhuqoin0DiQ')
+                .setDescription('*Kullanabileceğin Komutlar bunlar.*')
+                .addFields(
+                    { name: ` @${author.tag}'ın leveli artık **${user.level}**`, value: 'By LighTra#5975' },
+
+                )
+
             message.channel.send(newEmbed)
         }
 
@@ -108,45 +108,46 @@ client.once('ready', () => {
             const leaderboard = await Levels.computeLeaderboard(client, rawLeaderboard);
 
             const lb = leaderboard.map(e => `${e.position}. ${e.username}#${e.discriminator}`);
-            const lb1 = leaderboard.map(e =>`\nLevel: ${e.level}\nXP: ${e.xp.toLocaleString()}`)
+            const lb1 = leaderboard.map(e => `\nLevel: ${e.level}\nXP: ${e.xp.toLocaleString()}`)
             const newEmbed = new Discord.MessageEmbed()
-            
+
                 .setColor('#215B8F')
                 .setTitle('Rank Listesi')
                 .setURL('https://www.youtube.com/channel/UCiJymGtm9kq-Fhuqoin0DiQ')
                 .addFields(
-                    { name: lb,lb1  , value:'By LighTra#5975'},
+                    { name: lb, lb1, value: 'By LighTra#5975' },
                 )
-                
+
 
             message.channel.send(newEmbed)
         } else if (command === "rank") {
             const user = await Levels.fetch(message.author.id, message.guild.id);
-            const rawLeaderboard = await Levels.fetchLeaderboard(message.guild.id, 5 );
+            const rawLeaderboard = await Levels.fetchLeaderboard(message.guild.id, 5);
             const leaderboard1 = await Levels.computeLeaderboard(client, rawLeaderboard);
-            const lb2 = await leaderboard1.map(e =>`\nLevel: ${e.level}\nXP: ${e.xp.toLocaleString()}`)
+            const lb2 = await leaderboard1.map(e => `\nLevel: ${e.level}\nXP: ${e.xp.toLocaleString()}`)
             var author = message.author
             const newEmbed = new Discord.MessageEmbed()
 
-            .setColor('#215B8F')
-            .setTitle(`${author.tag}`)
-            .addFields(
-              {name: `Level:`, value: ` ${user.level}`},
-              {name:'XP:' , value: `${user.xp}`}
-            )
-            
-            message.channel.send(newEmbed)
-        }
-    
-            
-    
-    
-        
+                .setColor('#215B8F')
+                .setTitle(`${author.tag}`)
+                .addFields(
+                    { name: `Level:`, value: ` ${user.level}` },
+                    { name: 'XP:', value: `${user.xp}` }
+                )
 
-        
+            message.channel.send(newEmbed)
+        } else if (command == 'rapor') {
+            client.commands.get('rapor').execute(message, args,Discord)        
+        }
+
+
+
+
+
+
 
 
     });
 
 
-client.login(procces.env.token)
+client.login('Nzg0ODcxMjkwMzc1ODk3MTI4.X8vmWQ.3PAokNlNT_LcIeGC3U2WaI8zZko')
