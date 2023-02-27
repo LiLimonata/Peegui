@@ -7,7 +7,7 @@ module.exports = {
       .addFields(
         {name: '**Destek Sunucumuz**', value: 'https://discord.gg/T9FQ8Sn3jH'},
       )
-      .setFooter('By LighTra#5975')
+      .setFooter('...')
       
       message.channel.send(newEmbed)
   }

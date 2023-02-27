@@ -14,7 +14,7 @@ module.exports = {
             .addFields(
               {name: '**Kullanıcı Banlandı**' , value:`@${author.tag} Tarafından İstendi`},
             )
-            .setFooter('By LighTra#5975')
+            .setFooter('...')
             
             message.channel.send(newEmbed)
 
@@ -25,7 +25,7 @@ module.exports = {
             .addFields(
               {name: '**Bu Kullanıcıyı Banlayamazsın**' , value:`@${author.tag} Tarafından İstendi`}
             )
-            .setFooter('By LighTra#5975')
+            .setFooter('...')
             
             message.channel.send(new1Embed)
         }
@@ -36,7 +36,7 @@ module.exports = {
     .addFields(
       {name: '**Bu Komutu Kullanmaya Yetkin Yok Gereken Yetki** : `Üyeleri Engelle`' , value:`@${author.tag} Tarafından İstendi`},
     )
-    .setFooter('By LighTra#5975')
+    .setFooter('...')
     
     message.channel.send(new2Embed)
     }

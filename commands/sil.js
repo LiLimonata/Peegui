@@ -10,7 +10,7 @@ module.exports = {
         .addFields(
           {name: '**Kaç Tane Mesaj Silmek İstediğini Yaz!**' , value:`@${author.tag} Tarafından İstendi`}
         )
-        .setFooter('By LighTra#5975')
+        .setFooter('...')
         
         message.channel.send(newEmbed)
         return
@@ -24,7 +24,7 @@ module.exports = {
         .addFields(
           {name: '**Bir sayı yazmalısın!**' , value:`@${author.tag} Tarafından İstendi`}
         )
-        .setFooter('By LighTra#5975')
+        .setFooter('...')
         
         message.channel.send(new1Embed)
         return
@@ -39,7 +39,7 @@ module.exports = {
         .addFields(
           {name: '**100den fazla mesaj silemezsin!**' , value:`@${author.tag} Tarafından İstendi`}
         )
-        .setFooter('By LighTra#5975')
+        .setFooter('...')
         
         message.channel.send(new2Embed)
         return
@@ -52,7 +52,7 @@ module.exports = {
         .addFields(
           {name: '**En az 1 mesaj silmelisin!**' , value:`@${author.tag} Tarafından İstendi`}
         )
-        .setFooter('By LighTra#5975')
+        .setFooter('...')
         
         message.channel.send(new3Embed)
         return
@@ -68,7 +68,7 @@ module.exports = {
   .addFields(
     {name: '**Bu Komutu Kullanmaya Yetkin Yok Gereken Yetki** : `Mesajları Yönet`' , value:`@${author.tag} Tarafından İstendi`}
   )
-  .setFooter('By LighTra#5975')
+  .setFooter('...')
   
   message.channel.send(new4Embed)
 

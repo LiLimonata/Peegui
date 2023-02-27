@@ -11,7 +11,7 @@ module.exports = {
                 .addFields(
                     { name: 'Lütfen Bir Port girin `Örnek Kullanım: ;server mc.hypixel.net **25565**`', value: `@${author.tag} Tarafından İstendi` }
                 )
-                .setFooter('By LighTra#5975')
+                .setFooter('...')
 
             message.channel.send(new1Embed)
             return
@@ -23,7 +23,7 @@ module.exports = {
                 .addFields(
                     { name:'Lütfen Bir server adresi girin! `Örnek Kullanım: ;server **mc.hypixel.net** 25565`', value: `@${author.tag} Tarafından İstendi` }
                 )
-                .setFooter('By LighTra#5975')
+                .setFooter('...')
 
             message.channel.send(newEmbed)
 
@@ -43,7 +43,7 @@ module.exports = {
                     { name: 'Maksimum Oyuncular', value: response.maxPlayers },
                     { name: 'Versiyon', value: response.version }
                 )
-                .setFooter('By LighTra#5975');
+                .setFooter('...');
 
             message.channel.send(embed);
         })

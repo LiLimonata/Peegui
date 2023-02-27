@@ -10,9 +10,7 @@ const Levels = require('discord-xp')
 
 const mongoose = require('mongoose')
 
-Levels.setURL('mongodb+srv://lightra:ruzgar14@cluster0.w0kvn.mongodb.net/test')
-
-
+require('dotenv').config();
 
 
 client.commands = new Discord.Collection();
@@ -29,11 +27,11 @@ for (const file of commandFiles) {
 
 client.once('ready', () => {
     console.log('Peegui Bot is online!');
-    client.user.setActivity(";yardım", {
-        type: "WATCHING",
-        url: "twitch.tv/lightra_"
-    });
+    client.user.setActivity(";yardım")
 });
+
+
+
 -
     client.on('message', async message => {
 
@@ -52,7 +50,7 @@ client.once('ready', () => {
                 .setURL('https://www.youtube.com/channel/UCiJymGtm9kq-Fhuqoin0DiQ')
                 .setDescription('*Kullanabileceğin Komutlar bunlar.*')
                 .addFields(
-                    { name: ` @${author.tag}'ın leveli artık **${user.level}**`, value: 'By LighTra#5975' },
+                    { name: ` @${author}'ın leveli artık **${user.level}**`, value: '...' },
 
                 )
 
@@ -115,7 +113,7 @@ client.once('ready', () => {
                 .setTitle('Rank Listesi')
                 .setURL('https://www.youtube.com/channel/UCiJymGtm9kq-Fhuqoin0DiQ')
                 .addFields(
-                    { name: lb, lb1, value: 'By LighTra#5975' },
+                    { name: lb, lb1, value: '...' },
                 )
 
 
@@ -137,8 +135,17 @@ client.once('ready', () => {
 
             message.channel.send(newEmbed)
         } else if (command == 'rapor') {
-            client.commands.get('rapor').execute(message, args,Discord)        
+            client.commands.get('rapor').execute(message, args, Discord)
+        } else if (command == 'bom-oyna'){
+            client.commands.get('bom-oyna').execute(message, args, Discord)
+        } else if (command == 'konuş'){
+            client.commands.get('konuş').execute(message, args, Discord)
+        } else if (command == 'uyar'){
+            client.commands.get('uyar').execute(message, args, Discord)
+        } else if (command == 'öner'){
+            client.commands.get('öner').execute(message, args, Discord)
         }
+
 
 
 
@@ -150,4 +157,8 @@ client.once('ready', () => {
     });
 
 
-client.login('Nzg0ODcxMjkwMzc1ODk3MTI4.X8vmWQ.3PAokNlNT_LcIeGC3U2WaI8zZko')
+Levels.setURL(process.env.MONGO_SRV)
+
+client.login(process.env.DISCORD_TOKEN)
+
+

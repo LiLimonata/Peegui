@@ -16,7 +16,7 @@ module.exports = {
             .addFields(
               {name: '**Kullanıcı Atıldı**' , value:`@${author.tag} Tarafından İstendi`}
             )
-            .setFooter('By LighTra#5975')
+            .setFooter('...')
             
             message.channel.send(new1Embed)
 
@@ -30,7 +30,7 @@ module.exports = {
             .addFields(
               {name: '**Bu Kullanıcıyı Atamazsın!**' , value:`@${author.tag} Tarafından İstendi`}
             )
-            .setFooter('By LighTra#5975')
+            .setFooter('...')
             
             message.channel.send(newEmbed)
             
@@ -42,7 +42,7 @@ module.exports = {
         .addFields(
           {name: '**Bu Komutu Kullanmaya Yetkin Yok Gereken Yetki** : `Üyeleri At`' , value:`@${author.tag} Tarafından İstendi`}
         )
-        .setFooter('By LighTra#5975')
+        .setFooter("...")
         
         message.channel.send(new2Embed)
     }

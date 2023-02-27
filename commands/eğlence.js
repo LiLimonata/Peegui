@@ -11,9 +11,12 @@ module.exports = {
           {name: '`;yt`', value: '*youtube kanalımı atar*'},
           {name: '`;fbi`', value: '*fbi çağırır*'},
           {name: '`;ping`', value: '*pong komutunu geri atar hiçbi amacı yok*'},
-          {name: '`;meme`' , value: '*Burdurlannden bir meme atar*' }
+          //{name: '`;meme`' , value: '*Burdurlannden bir meme atar*' },
+          {name: '`:bom-oyna`' , value: '*Daha tam çalışmıyor denerseniz problem çıkabilir!*' },
+          {name: '`;konuş`' , value: '*Eğer bir kişi sizde engelli ise veya acil ulaşmanız gerekiyorsa kullanın*' },
+          {name: '`;server`' , value: '*Yazdığınız minecraft sunucunun bilgilerini atar*' },
         )
-        .setFooter('By LighTra#5975')
+        .setImage('https://media.giphy.com/media/utJaUUCnBNYwtMJiLu/giphy.gif')
         
         message.channel.send(newEmbed)
     }

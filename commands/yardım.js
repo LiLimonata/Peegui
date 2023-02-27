@@ -12,7 +12,7 @@ module.exports = {
           {name: ':hammer_pick: `;moderatör`', value: '*moderatör komutlarını gösterir.*'},
           
         )
-        .setFooter('By LighTra#5975')
+        .setImage("https://media.giphy.com/media/utJaUUCnBNYwtMJiLu/giphy.gif")
         
         message.channel.send(newEmbed)
     }

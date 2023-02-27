@@ -12,9 +12,11 @@ module.exports = {
           {name: '`;kick <üye-ismi>`' , value: '*Seçtiğin üyeyi atar.*'},
           {name: '`;ban <üye-ismi>`' , value: '*Seçtiğin üyeyi banlar.*'},
           {name: '`;sustur <üye-ismi>`' , value: '*Seçtiğin üyeyi susturur.*'},
-          {name: '`;susturma-aç <üye-ismi>`' , value: '*Seçtiğin üyenin susturmasını kaldırır.*'}        
+          {name: '`;susturma-aç <üye-ismi>`' , value: '*Seçtiğin üyenin susturmasını kaldırır.*'},
+          {name: '`;susturma-ayarla`' , value: '*Eğer sunucunuzda susturma için gerekli düzenlemeeler yoksa kullanabileceğiniz komut*' },
+          {name: '`;rapor <üye-ismi> <rapor-kanalı> <rapor-nedeni>`' , value: '*İstediğiniz kanala istdeiğniz kişiyi istediğniz nedenle raporlar*' },      
           )
-          .setFooter('By LighTra#5975')
+        .setImage("https://media.giphy.com/media/utJaUUCnBNYwtMJiLu/giphy.gif")
         
         message.channel.send(newEmbed)
     }
